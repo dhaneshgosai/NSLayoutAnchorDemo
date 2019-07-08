@@ -16,11 +16,11 @@ class ViewController: UIViewController {
 //        //Full View
 //        addViewWithLayoutAnchor()
         
-        //Center View
-        addViewInCenterOfSueprView()
+//        //Center View
+//        addViewInCenterOfSueprView()
         
-//        //Form View
-//        addFormViewInSuperView()
+        //Form View
+        addFormViewInSuperView()
     }
     
     func addViewWithLayoutAnchor() {
@@ -72,14 +72,19 @@ class ViewController: UIViewController {
         
         let firstNameTestFiled = UITextField()
         firstNameTestFiled.placeholder = "Enter First Name"
+        firstNameTestFiled.borderStyle = .roundedRect
         firstNameTestFiled.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(firstNameTestFiled)
         
-        firstNameLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20.0)
-        firstNameLabel.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 20.0)
+        firstNameLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20.0).isActive = true
+        firstNameLabel.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 84.0).isActive = true
         
-        firstNameTestFiled.leadingAnchor.constraint(equalTo: firstNameLabel.trailingAnchor, constant: 10.0)
-        firstNameLabel.firstBaselineAnchor.constraint(equalTo: firstNameTestFiled.firstBaselineAnchor)
+        firstNameTestFiled.leadingAnchor.constraint(equalTo: firstNameLabel.trailingAnchor, constant: 10.0).isActive = true
+        firstNameTestFiled.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20).isActive = true
+
+        firstNameLabel.firstBaselineAnchor.constraint(equalTo: firstNameTestFiled.firstBaselineAnchor).isActive = true
+        
+        firstNameLabel.setContentHuggingPriority(UILayoutPriority.required, for: .horizontal)
         
     }
 
