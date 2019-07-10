@@ -151,7 +151,7 @@ class ViewController: UIViewController {
         self.containerView.addSubview(secNameTestFiled)
         
         secNameLabel.leadingAnchor.constraint(equalTo: self.containerView.leadingAnchor, constant: 20.0).isActive = true
-        secNameLabel.topAnchor.constraint(equalTo: firstNameLabel.topAnchor, constant: 10.0).isActive = true
+        secNameLabel.topAnchor.constraint(equalTo: firstNameLabel.bottomAnchor, constant: 20.0).isActive = true
         
         secNameTestFiled.leadingAnchor.constraint(equalTo: secNameLabel.trailingAnchor, constant: 10.0).isActive = true
         secNameTestFiled.trailingAnchor.constraint(equalTo: self.containerView.trailingAnchor, constant: -20).isActive = true
@@ -167,7 +167,7 @@ class ViewController: UIViewController {
         submitBtn.translatesAutoresizingMaskIntoConstraints = false
         self.containerView.addSubview(submitBtn)
         
-        submitBtn.topAnchor.constraint(equalTo: secNameLabel.topAnchor, constant: 10.0).isActive = true
+        submitBtn.topAnchor.constraint(equalTo: secNameLabel.bottomAnchor, constant: 20.0).isActive = true
         submitBtn.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
     
     }
