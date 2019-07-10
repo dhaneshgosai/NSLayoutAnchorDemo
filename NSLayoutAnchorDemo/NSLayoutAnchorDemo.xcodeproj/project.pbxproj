@@ -437,7 +437,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SVX3Z89597;
+				DEVELOPMENT_TEAM = XZDGN7QEVF;
 				INFOPLIST_FILE = NSLayoutAnchorDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -455,7 +455,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SVX3Z89597;
+				DEVELOPMENT_TEAM = XZDGN7QEVF;
 				INFOPLIST_FILE = NSLayoutAnchorDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
