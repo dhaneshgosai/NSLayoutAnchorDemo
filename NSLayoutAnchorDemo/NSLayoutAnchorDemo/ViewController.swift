@@ -26,8 +26,11 @@ class ViewController: UIViewController {
 //        //Form View
 //        addFormViewInSuperView()
         
-        //ScrollView
-        setupScrollView()
+//        //ScrollView
+//        setupScrollView()
+        
+        //Height & Width with multipler
+        addViewWithMultipler()
     }
     
     func addViewWithLayoutAnchor() {
@@ -174,6 +177,24 @@ class ViewController: UIViewController {
         self.containerView.bottomAnchor.constraint(equalTo: submitBtn.bottomAnchor).isActive = true;
         self.scrollView.bottomAnchor.constraint(equalTo: self.containerView.bottomAnchor).isActive = true
     
+    }
+    
+    func addViewWithMultipler() {
+        
+        
+        let sampleView = UIView()
+        sampleView.translatesAutoresizingMaskIntoConstraints = false
+        sampleView.backgroundColor = .red
+        self.view.addSubview(sampleView)
+        
+        //Set Cosntrains X & Y
+        sampleView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        sampleView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+        
+        //Set Height & Width as per super view
+        sampleView.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.5).isActive = true
+        sampleView.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.5).isActive = true
+        
     }
     
     @IBAction func  btnSubmitClicked (_ sender: UIButton) {
